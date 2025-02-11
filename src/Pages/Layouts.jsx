@@ -26,11 +26,11 @@ const Layouts = () => {
     },
   ];
   return (
-    <>
+    <div className="d-flex flex-column mt-5 gap-5">
       {obj.map((elem, i) => {
         return <Card cardTitle={elem.title} img={elem.img} key={i} />;
       })}
-    </>
+    </div>
   );
 };
 

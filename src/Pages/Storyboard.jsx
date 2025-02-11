@@ -1,7 +1,7 @@
 import React from "react";
 
 const Storyboard = () => {
-  return <div></div>;
+  return <div>Storyboard</div>;
 };
 
 export default Storyboard;

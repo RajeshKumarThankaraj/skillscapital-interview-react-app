@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import iconImage from "../assets/images/sales-growth.png";
 
-const FeaturesCard = ({ index, kpiName, kpiDesc, dataBsTarget, date }) => {
+const FeaturesCard = ({ index, kpiName, kpiDesc, date }) => {
   const [modalBtn, setModalBtn] = useState(false);
   return (
-    <>
+    <div>
       <button
         className="card"
         key={index}
-        data-bs-target={dataBsTarget}
+        data-bs-target={kpiName}
         onClick={() => {
           setModalBtn(!modalBtn);
         }}
@@ -35,7 +35,7 @@ const FeaturesCard = ({ index, kpiName, kpiDesc, dataBsTarget, date }) => {
         </div>
       </button>
       <Modal modalShow={modalBtn} setModalBtn={setModalBtn} title={kpiName} />
-    </>
+    </div>
   );
 };
 

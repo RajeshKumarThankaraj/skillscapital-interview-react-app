@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ item, activeNav, setActiveNav }) => {
   return (
@@ -24,13 +25,14 @@ const NavBar = ({ item, activeNav, setActiveNav }) => {
                     className={`nav-item ${activeNav === i ? "active" : ""}`}
                     key={i}
                   >
-                    <button
+                    <Link
                       className="nav-link active"
                       aria-current={elem}
                       onClick={() => setActiveNav(i)}
+                      to={`/${elem.toLowerCase()}`}
                     >
                       {elem}
-                    </button>
+                    </Link>
                   </li>
                 );
               })}
